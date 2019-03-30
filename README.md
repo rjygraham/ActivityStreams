@@ -42,3 +42,5 @@ As always, pull requests are welcomed.
 This project is licensed under the MIT license.
 
 There are code files in use from the [Schema.NET](https://github.com/RehanSaeed/Schema.NET/tree/master/Source/Schema.NET) project and those files carry forward MIT license from that project.
+
+[![Build status](https://rjygraham.visualstudio.com/ActivityStreams/_apis/build/status/ActivityStreams%20-%20CI)](https://rjygraham.visualstudio.com/ActivityStreams/_build/latest?definitionId=7)
