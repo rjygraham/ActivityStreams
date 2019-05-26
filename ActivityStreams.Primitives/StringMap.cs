@@ -84,7 +84,7 @@ namespace ActivityStreams.Primitives
 		/// <summary>
 		/// Gets the non-null object representing the instance.
 		/// </summary>
-		object IValue.Value
+		public object Value
 		{
 			get
 			{
