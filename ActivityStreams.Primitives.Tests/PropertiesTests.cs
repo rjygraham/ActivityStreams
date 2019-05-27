@@ -1102,7 +1102,7 @@ namespace ActivityStreams.Primitives.Tests
 			Context = new ActivityStreamsObject("https://www.w3.org/ns/activitystreams"),
 			Summary = "Sally liked a note",
 			Actor = new ActivityStreamsObject("http://sally.example.org"),
-			Object = new ActivityStreamsBase[]
+			Object = new ActivityStreamsObject[]
 			{
 				new ActivityStreamsObject("http://example.org/posts/1"),
 				new Note

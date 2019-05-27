@@ -19,7 +19,7 @@ namespace ActivityStreams.Primitives
 		/// </summary>
 		[JsonProperty("object", NullValueHandling = NullValueHandling.Ignore)]
 		[JsonConverter(typeof(InnerJsonConverter))]
-		public OneOrMany<ActivityStreamsBase> Object { get; set; }
+		public OneOrMany<ActivityStreamsObject> Object { get; set; }
 
 		public Activity()
 		{
