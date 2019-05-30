@@ -12,7 +12,7 @@ namespace ActivityStreams.Primitives.Serialization
 	/// Converter that handles the really messy/ugly serialization/deserialization of Activity 
 	/// Streams object properties.
 	/// </summary>
-	public class ActivityStreamsPropertyJsonConverter : JsonConverter
+	public sealed class ActivityStreamsPropertyJsonConverter : JsonConverter
 	{
 		//private static Type activityStreamsBaseType = typeof(ActivityStreamsBase);
 

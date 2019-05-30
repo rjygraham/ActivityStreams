@@ -9,7 +9,7 @@ namespace ActivityStreams.Primitives.Serialization
 	/// Activity Streams converter required for proper serialization/deserialization within
 	/// application code.
 	/// </summary>
-	public class ActivityStreamsJsonConverter : JsonConverter
+	public sealed class ActivityStreamsJsonConverter : JsonConverter
 	{
 		public override bool CanConvert(Type objectType)
 		{
