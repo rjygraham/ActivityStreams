@@ -19,7 +19,7 @@ namespace ActivityStreams.Primitives
 		/// http://sally.example.org
 		/// </example>
 		[JsonProperty("actor", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> Actor { get; set; }
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace ActivityStreams.Primitives
 		/// can have more than one target. 
 		/// </summary>
 		[JsonProperty("target", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> Target { get; set; }
 
 		/// <summary>
@@ -39,7 +39,7 @@ namespace ActivityStreams.Primitives
 		/// resource. 
 		/// </summary>
 		[JsonProperty("result", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsObject> Result { get; set; }
 
 		/// <summary>
@@ -49,14 +49,14 @@ namespace ActivityStreams.Primitives
 		/// activity is "List A". 
 		/// </summary>
 		[JsonProperty("origin", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public ActivityStreamsObject Origin { get; set; }
 
 		/// <summary>
 		/// Identifies one or more objects used (or to be used) in the completion of an Activity. 
 		/// </summary>
 		[JsonProperty("instrument", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public ActivityStreamsObject Instrument { get; set; }
 
 		public IntransitiveActivity()

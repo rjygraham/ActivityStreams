@@ -10,7 +10,7 @@ namespace ActivityStreams.Primitives.Tests
 		{
 			Converters = new List<JsonConverter>()
 			{
-				new ActivityStreamsConverter()
+				new ActivityStreamsJsonConverter()
 			}
 		};
 	}

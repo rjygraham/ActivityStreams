@@ -25,7 +25,7 @@ namespace ActivityStreams.Primitives
 		/// http://example.org/collection
 		/// </example>
 		[JsonProperty("current", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public T Current { get; set; }
 
 		/// <summary>
@@ -36,7 +36,7 @@ namespace ActivityStreams.Primitives
 		/// http://example.org/collection?page=0
 		/// </example>
 		[JsonProperty("first", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public T First { get; set; }
 
 		/// <summary>
@@ -46,7 +46,7 @@ namespace ActivityStreams.Primitives
 		/// http://example.org/collection?page=1
 		/// </example>
 		[JsonProperty("last", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public T Last { get; set; }
 	}
 }

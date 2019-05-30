@@ -9,7 +9,7 @@ namespace ActivityStreams.Primitives.Serialization
 	/// Activity Streams converter required for proper serialization/deserialization within
 	/// application code.
 	/// </summary>
-	public class ActivityStreamsConverter : JsonConverter
+	public class ActivityStreamsJsonConverter : JsonConverter
 	{
 		public override bool CanConvert(Type objectType)
 		{
@@ -50,8 +50,8 @@ namespace ActivityStreams.Primitives.Serialization
 				stringMapProperty.Remove();
 			}
 
-			// All other properties will be handled by InnerJsonConverter.
-			return token.ToObject(objectType);
+            // All other properties will be handled by ActivityStreamsPropertyJsonConverter.
+            return token.ToObject(objectType);
 		}
 
 		private object ReadObject(JToken token)
@@ -93,7 +93,7 @@ namespace ActivityStreams.Primitives.Serialization
 				}
 			}
 
-			// All other properties will be handled by InnerJsonConverter.
+			// All other properties will be handled by ActivityStreamsPropertyJsonConverter.
 			token.WriteTo(writer);
 		}
 	}

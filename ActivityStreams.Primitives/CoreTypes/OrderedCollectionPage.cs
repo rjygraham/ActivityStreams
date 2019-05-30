@@ -29,7 +29,7 @@ namespace ActivityStreams.Primitives
 		/// http://example.org/collection?page=2
 		/// </example>
 		[JsonProperty("next", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public P Next { get; set; }
 
 		/// <summary>
@@ -39,7 +39,7 @@ namespace ActivityStreams.Primitives
 		/// http://example.org/collection?page=1
 		/// </example>
 		[JsonProperty("prev", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public P Prev { get; set; }
 
 		/// <summary>

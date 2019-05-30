@@ -15,7 +15,7 @@ namespace ActivityStreams.Primitives
 		/// Profile. 
 		/// </summary>
 		[JsonProperty("describes", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public ActivityStreamsObject Describes { get; set; }
 
 		public Profile()

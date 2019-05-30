@@ -18,15 +18,15 @@ namespace ActivityStreams.Primitives
 		/// Sally", subject would refer to John.
 		/// </summary>
 		[JsonProperty("subject", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public ActivityStreamsBase Subject { get; set; }
 
 		[JsonProperty("relationship", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public Relationship Relation { get; set; }
 
 		[JsonProperty("object", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public ActivityStreamsObject Object { get; set; }
 
 		public Relationship()

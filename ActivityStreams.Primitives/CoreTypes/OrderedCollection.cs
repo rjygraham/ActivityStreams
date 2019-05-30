@@ -16,7 +16,7 @@ namespace ActivityStreams.Primitives
 		/// unordered. 
 		/// </summary>
 		[JsonProperty("orderedItems", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public List<T> OrderedItems { get; set; }
 
 		public OrderedCollection()

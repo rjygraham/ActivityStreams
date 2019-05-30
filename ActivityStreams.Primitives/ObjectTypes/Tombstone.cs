@@ -15,7 +15,7 @@ namespace ActivityStreams.Primitives
 		/// was deleted.
 		/// </summary>
 		[JsonProperty("formerType", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public ActivityStreamsObject FormerType { get; set; }
 
 		/// <summary>
@@ -23,7 +23,7 @@ namespace ActivityStreams.Primitives
 		/// deleted.
 		/// </summary>
 		[JsonProperty("deleted", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public DateTime? Deleted { get; set; }
 
 		public Tombstone()

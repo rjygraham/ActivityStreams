@@ -18,7 +18,7 @@ namespace ActivityStreams.Primitives
 		/// such as Activity, IntransitiveActivity, Collection and OrderedCollection.
 		/// </summary>
 		[JsonProperty("object", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsObject> Object { get; set; }
 
 		public Activity()

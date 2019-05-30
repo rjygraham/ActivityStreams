@@ -45,7 +45,7 @@ namespace ActivityStreams.Primitives
 		/// canonical, preview
 		/// </example>
 		[JsonProperty("rel", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<string> Rel { get; set; }
 
 		/// <summary>
@@ -72,7 +72,7 @@ namespace ActivityStreams.Primitives
 		/// Identifies an entity that provides a preview of this object. 
 		/// </summary>
 		[JsonProperty("preview", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public ActivityStreamsObject Preview { get; set; }
 
 		public Link()

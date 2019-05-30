@@ -18,7 +18,7 @@ namespace ActivityStreams.Primitives
 		/// similar to attachments in email. 
 		/// </summary>
 		[JsonProperty("attachment", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> Attachment { get; set; }
 
 		/// <summary>
@@ -27,7 +27,7 @@ namespace ActivityStreams.Primitives
 		/// completion of another activity. 
 		/// </summary>
 		[JsonProperty("attributedTo", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> AttributedTo { get; set; }
 
 		/// <summary>
@@ -35,7 +35,7 @@ namespace ActivityStreams.Primitives
 		/// which the object can considered to be relevant. 
 		/// </summary>
 		[JsonProperty("audience", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> Audience { get; set; }
 
 		/// <summary>
@@ -46,7 +46,7 @@ namespace ActivityStreams.Primitives
 		/// The content MAY be expressed using multiple language-tagged values.
 		/// </summary>
 		[JsonProperty("content", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public StringMap Content { get; set; }
 
 		/// <summary>
@@ -61,7 +61,7 @@ namespace ActivityStreams.Primitives
 		/// Identifies the entity (e.g. an application) that generated the object. 
 		/// </summary>
 		[JsonProperty("generator", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public ActivityStreamsBase Generator { get; set; }
 
 		/// <summary>
@@ -70,35 +70,35 @@ namespace ActivityStreams.Primitives
 		/// presentation at a small size.
 		/// </summary>
 		[JsonProperty("icon", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> Icon { get; set; }
 
 		/// <summary>
 		/// 
 		/// </summary>
 		[JsonProperty("image", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> Image { get; set; }
 
 		/// <summary>
 		/// Indicates one or more entities for which this object is considered a response. 
 		/// </summary>
 		[JsonProperty("inReplyTo", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public ActivityStreamsBase InReplyTo { get; set; }
 
 		/// <summary>
 		/// Indicates one or more physical or logical locations associated with the object. 
 		/// </summary>
 		[JsonProperty("location", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> Location { get; set; }
 
 		/// <summary>
 		/// Identifies an entity that provides a preview of this object. 
 		/// </summary>
 		[JsonProperty("preview", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public ActivityStreamsBase Preview { get; set; }
 
 		/// <summary>
@@ -111,7 +111,7 @@ namespace ActivityStreams.Primitives
 		/// Identifies a Collection containing objects considered to be responses to this object. 
 		/// </summary>
 		[JsonProperty("replies", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public Collection<ActivityStreamsObject> Replies { get; set; }
 
 		/// <summary>
@@ -128,7 +128,7 @@ namespace ActivityStreams.Primitives
 		/// association by inclusion, while the latter implies associated by reference. 
 		/// </summary>
 		[JsonProperty("tag", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> Tag { get; set; }
 
 		/// <summary>
@@ -141,28 +141,28 @@ namespace ActivityStreams.Primitives
 		/// Identifies one or more links to representations of the object 
 		/// </summary>
 		[JsonProperty("url", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<Link> Url { get; set; }
 
 		/// <summary>
 		/// Identifies an entity considered to be part of the public primary audience of an Object 
 		/// </summary>
 		[JsonProperty("to", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> To { get; set; }
 
 		/// <summary>
 		/// Identifies an Object that is part of the private primary audience of this Object. 
 		/// </summary>
 		[JsonProperty("bto", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> Bto { get; set; }
 
 		/// <summary>
 		/// Identifies an Object that is part of the public secondary audience of this Object.
 		/// </summary>
 		[JsonProperty("cc", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> Cc { get; set; }
 
 		/// <summary>
@@ -170,7 +170,7 @@ namespace ActivityStreams.Primitives
 		/// Object. 
 		/// </summary>
 		[JsonProperty("bcc", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> Bcc { get; set; }
 
 		/// <summary>
@@ -180,7 +180,7 @@ namespace ActivityStreams.Primitives
 		/// period of 5 seconds is represented as "PT5S"). 
 		/// </summary>
 		[JsonProperty("duration", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public TimeSpan? Duration { get; set; }
 
 		public ActivityStreamsObject()

@@ -19,7 +19,7 @@ namespace ActivityStreams.Primitives
 		/// use anyOf. 
 		/// </summary>
 		[JsonProperty("oneOf", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> OneOf { get; set; }
 
 		/// <summary>
@@ -28,14 +28,14 @@ namespace ActivityStreams.Primitives
 		/// oneOf. 
 		/// </summary>
 		[JsonProperty("anyOf", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> AnyOf { get; set; }
 
 		/// <summary>
 		/// Indicates that a question has been closed, and answers are no longer accepted. 
 		/// </summary>
 		[JsonProperty("closed", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public IActivityStreamsType Closed { get; set; }
 
 		public Question()

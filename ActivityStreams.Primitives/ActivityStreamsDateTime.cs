@@ -10,7 +10,7 @@ namespace ActivityStreams.Primitives
 	/// </summary>
 	public class ActivityStreamsDateTime : IActivityStreamsType
 	{
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public DateTime? Value { get; set; }
 
 		public ActivityStreamsDateTime() { }

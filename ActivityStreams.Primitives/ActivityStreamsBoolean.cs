@@ -9,7 +9,7 @@ namespace ActivityStreams.Primitives
 	/// </summary>
 	public class ActivityStreamsBoolean : IActivityStreamsType
 	{
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public bool? Value { get; set; }
 
 		public ActivityStreamsBoolean() { }

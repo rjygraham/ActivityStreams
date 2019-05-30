@@ -19,7 +19,7 @@ namespace ActivityStreams.Primitives
 		/// https://www.w3.org/ns/activitystreams
 		/// </example>
 		[JsonProperty("context", Order = -4, NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public ActivityStreamsBase Context { get; set; }
 
 		/// <summary>
@@ -29,7 +29,7 @@ namespace ActivityStreams.Primitives
 		/// Link
 		/// </example>
 		[JsonProperty("type", Order = -3, NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public OneOrMany<ActivityStreamsBase> Type { get; set; }
 
 		/// <summary>
@@ -67,7 +67,7 @@ namespace ActivityStreams.Primitives
 		/// { "zh-Hans": "一段简单的笔记" }
 		/// </example>
 		[JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public StringMap Name { get; set; }
 
 		/// <summary>
@@ -75,7 +75,7 @@ namespace ActivityStreams.Primitives
 		/// tagged summaries MAY be provided.
 		/// </summary>
 		[JsonProperty("summary", NullValueHandling = NullValueHandling.Ignore)]
-		[JsonConverter(typeof(InnerJsonConverter))]
+		[JsonConverter(typeof(ActivityStreamsPropertyJsonConverter))]
 		public StringMap Summary { get; set; }
 	}
 }
